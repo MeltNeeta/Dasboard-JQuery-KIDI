@@ -1,0 +1,33 @@
+:root {
+    --black: #080f11;
+    --purple: #afacd0;
+    --orange: #fe9458;
+    --salmon: #f7a99a;
+    --blue: #619bd0;
+    --white: #d8ecf2;
+}
+
+body {
+    background: linear-gradient(45deg, #619bd0, #f7a99a);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    position: fixed;
+    height: 75px;
+    font-size: 20px;
+    background-color: #080f11cb;
+    min-width: 100%;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-self: center;
+}
+nav li {
+    color: linear-gradient(90deg, #d8ecf2, #f7a99a);
+}
