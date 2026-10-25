@@ -16,10 +16,12 @@ body {
 
 nav {
     position: fixed;
-    height: 75px;
+    height: 70px;
     font-size: 20px;
     background-color: #080f11cb;
     min-width: 100%;
+    margin-top: -100px;
+    box-shadow: 0px 10px 10px 0px var(--white);
 }
 nav ul {
     display: flex;
@@ -29,5 +31,65 @@ nav ul {
     align-self: center;
 }
 nav li {
-    color: linear-gradient(90deg, #d8ecf2, #f7a99a);
+    color: var(--white);
+    font-family: "League Gothic", sans-serif;
+    font-size: 30px;
+    line-height: 1;
+}
+nav li.name:hover {
+    background: linear-gradient(90deg, #f7a99a, #d8ecf2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    transition: 0.4s;
+    scale: 1.1;
+    cursor: pointer;
+    padding: 5px 20px;
+    line-height: 0.75;
+    box-shadow: 0 0 2px 2px var(--white);
+    border-radius: 20px;
+}
+
+/* main */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 20px;
+    animation: font 2s infinite;
+    line-height: 0;
+}
+@keyframes font {
+    0%, 100% {font-family: "Roboto", sans-serif;
+    font-weight: bolder;}
+    50% {font-family: "Roboto Slab", sans-serif;
+    font-weight:100;}
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+    animation: border-move 2s infinite;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px 1px var(--white);
+}
+@keyframes border-move {
+    0% {box-shadow: 2px 4px 4px 1px var(--white);}
+    25% {box-shadow: 2px -4px 4px 1px var(--white);}
+    50% {box-shadow: -2px -4px 4px 1px var(--white);}
+    75% {box-shadow: -2px 4px 4px 1px var(--white);}
+}
+.group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
