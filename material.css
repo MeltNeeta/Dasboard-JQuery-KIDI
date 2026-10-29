@@ -1,0 +1,155 @@
+:root {
+    --black: #080f11;
+    --purple: #afacd0;
+    --orange: #fe9458;
+    --salmon: #f7a99a;
+    --blue: #619bd0;
+    --white: #d8ecf2;
+}
+::-webkit-scrollbar{
+    background: transparent;
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--purple);
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+body {
+    background: linear-gradient(45deg, #d8ecf2, #619bd0);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    position: fixed;
+    height: 70px;
+    font-size: 20px;
+    background-color: #080f11cb;
+    min-width: 100%;
+    margin-top: -100px;
+    box-shadow: 0px 10px 10px 0px var(--white);
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-self: center;
+}
+nav li {
+    color: var(--white);
+    font-family: "League Gothic", sans-serif;
+    font-size: 30px;
+    line-height: 1;
+}
+nav li.name:hover {
+    background: linear-gradient(90deg, #619bd0, #d8ecf2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    transition: 0.4s;
+    scale: 1.1;
+    cursor: pointer;
+    padding: 5px 20px;
+    line-height: 0.75;
+    box-shadow: 0 0 2px 2px var(--white);
+    border-radius: 20px;
+}
+
+/* main */
+.home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 20px;
+    animation: font2 2s infinite;
+    line-height: 0;
+}
+@keyframes font2 {
+    0%, 100% {font-family: "Roboto", sans-serif;
+    font-weight: bolder;}
+    50% {font-family: "Roboto Slab", sans-serif;
+    font-weight:100;}
+}
+
+h3 {
+    font-size: 28px;
+    animation: font4 4s infinite;
+    line-height: 1;
+}
+@keyframes font4 {
+    0%{font-family: "Amatic SC", sans-serif;
+    font-weight: bolder;}
+    25%{font-family: "Playfair Display", serif;
+    font-weight: lighter;}
+    50%{font-family: "Barlow", sans-serif;
+    font-weight: bolder;}
+    75%{font-family: "Roboto Slab", sans-serif;
+    font-weight: lighter;}
+    100%{font-family: "Amatic SC", sans-serif;
+    font-weight: bolder;}
+}
+
+button.back {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    color: var(--white);
+    background: linear-gradient(90deg, #afacd0, #619bd0);
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+button.back:hover {
+    box-shadow: 0 4px 2px 0 var(--purple);
+    transform: translateY(-5px);
+    transition: 0.2s;
+}
+
+/* Main */
+.main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-self: center;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 20px;
+    box-shadow: 0 0 0 2px var(--white);
+    border-radius: 4px;
+    width: 500px;
+}
+
+.board {
+    display: flex;
+    text-align: left;
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    background-color: var(--black);
+    color: var(--purple);
+    padding: 10px;
+    border-radius: 10px;
+}

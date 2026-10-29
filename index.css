@@ -37,7 +37,7 @@ nav li {
     line-height: 1;
 }
 nav li.name:hover {
-    background: linear-gradient(90deg, #f7a99a, #d8ecf2);
+    background: linear-gradient(90deg, #f7a99a, #619bd0);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -127,7 +127,7 @@ button {
     100%{background: linear-gradient(90deg, #fe9458, #afacd0);}
 }
 button:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     transition: 0.2s;
     box-shadow: 0 4px 2px 0 var(--white);
     background-color: var(--black);
