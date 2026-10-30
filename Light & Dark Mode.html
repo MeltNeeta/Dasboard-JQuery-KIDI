@@ -38,7 +38,9 @@
 .container p {
     font-size: 16px;
     font-family: "Arimo", sans-serif;
-    color: var(--blue);
+    color: var(--white);
+    background: linear-gradient(90deg, #fe9458, #afacd0);
+    padding: 3px 0;
 }
 .container .button {
     display: flex;
@@ -82,11 +84,11 @@
 }
 
 .dark-mode {
-    background: linear-gradient(45deg, #080f11, #080f11, #afacd0) !important;
+    background: linear-gradient(45deg, #080f11, #080f11, #fe9458) !important;
     color: var(--white) !important;
 }
 .dark-mode-b {
-    background: linear-gradient(45deg, #080f11, #afacd0) !important;
+    background: linear-gradient(45deg, #080f11, #fe9458) !important;
     color: var(--white) !important;
 }
 
@@ -128,7 +130,117 @@
         <div class="card code">
             <h3>Code</h3>
 
+            <div class="menu-code">
+                <ul>
+                    <li class="html">HTML</li>
+                    <li class="css">CSS</li>
+                    <li class="js">JS</li>
+                </ul>
+            </div>
+
             <div class="board">
+
+            <div id="html-code">
+            <pre>
+&#x3C;div class=&#x22;container&#x22;&#x3E;
+    &#x3C;h1 id=&#x22;judulQ&#x22;&#x3E;Website Interaktif&#x3C;/h1&#x3E;
+    &#x3C;p id=&#x22;deskripsiQ&#x22;&#x3E;Klik tombol di bawah untuk melihat fitur JQuery!&#x3C;/p&#x3E;
+
+    &#x3C;div class=&#x22;button&#x22;&#x3E;
+        &#x3C;button id=&#x22;btnUbahTeksQ&#x22;&#x3E;Ubah Teks &#x26; Warna&#x3C;/button&#x3E;
+        &#x3C;button id=&#x22;btnToggleBoxQ&#x22;&#x3E;Sembunyikan / Tampilkan Box&#x3C;/button&#x3E;
+        &#x3C;button id=&#x22;btnDarkModeQ&#x22;&#x3E;Dark Mode | Light Mode&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;boxQ&#x22; id=&#x22;boxQ&#x22; style=&#x22;display: none;&#x22;&#x3E;Halo Saya Box Interaktif&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+            </pre>
+            </div>
+
+            <div id="css-code">
+            <pre>
+:root {
+    --black: #080f11;
+    --purple: #afacd0;
+    --orange: #fe9458;
+    --salmon: #f7a99a;
+    --blue: #619bd0;
+    --white: #d8ecf2;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: linear-gradient(45deg, #d8ecf2, #afacd0);
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+    color: var(--black);
+}
+.container h1 {
+    font-size: 20px;
+    font-family: "Roboto Slab", sans-serif;
+}
+.container p {
+    font-size: 16px;
+    font-family: "Arimo", sans-serif;
+    color: var(--white);
+    background: linear-gradient(90deg, #fe9458, #afacd0);
+    padding: 3px 0;
+}
+.container .button {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.container button {
+    border: none;
+    font-size: 18px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: bolder;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.container button:hover {
+    transform: translateY(-4px); scale: 1.05;
+    transition: 0.2s;
+}
+
+.container .boxQ {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    color: var(--blue);
+    background-color: var(--black);
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 40px;
+    height: 100px;
+    align-items: center;
+    line-height: 6;
+    animation: border-c 2s infinite;
+}
+@keyframes border-c {
+    0% {box-shadow: 4px 4px 0 0 var(--purple);}
+    25% {box-shadow: -4px 4px 0 0 var(--purple);}
+    50% {box-shadow: -4px -4px 0 0 var(--purple);}
+    75% {box-shadow: 4px -4px 0 0 var(--purple);}
+    100% {box-shadow: 4px 4px 0 0 var(--purple);}
+}
+
+.dark-mode {
+    background: linear-gradient(45deg, #080f11, #080f11, #fe9458) !important;
+    color: var(--white) !important;
+}
+.dark-mode-b {
+    background: linear-gradient(45deg, #080f11, #fe9458) !important;
+    color: var(--white) !important;
+}
+            </pre>
+            </div>
+
+            <div id="js-code">
             <pre>
 // Light & Dark Mode
 $(document).ready(function(){
@@ -160,6 +272,8 @@ $(document).ready(function(){
     });
 });
             </pre>
+            </div>
+            
             </div>
         </div>
     </div>

@@ -1,3 +1,34 @@
+// Button HTML - CSS - JS Code
+//button
+const btnHtml = document.querySelector(".menu-code .html");
+const btnCss = document.querySelector(".menu-code .css");
+const btnJs = document.querySelector(".menu-code .js");
+//card
+const codeHtml = document.querySelector("#html-code");
+const codeCss = document.querySelector("#css-code");
+const codeJs = document.querySelector("#js-code");
+//display awal
+codeHtml.style.display = "block";
+codeCss.style.display = "none";
+codeJs.style.display = "none";
+//function
+btnHtml.addEventListener("click", function(){
+    codeHtml.style.display = "block";
+    codeCss.style.display = "none";
+    codeJs.style.display = "none";
+});
+btnCss.addEventListener("click", function(){
+    codeHtml.style.display = "none";
+    codeCss.style.display = "block";
+    codeJs.style.display = "none";
+});
+btnJs.addEventListener("click", function(){
+    codeHtml.style.display = "none";
+    codeCss.style.display = "none";
+    codeJs.style.display = "block";
+});
+
+
 // Light & Dark Mode
 $(document).ready(function(){
     console.log("JQuery Siap digunakan");
